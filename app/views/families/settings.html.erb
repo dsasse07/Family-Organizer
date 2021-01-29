@@ -1,0 +1,11 @@
+<div class="settings_page">
+  <div class = "page_title">
+    <h2> Family Settings</h2>
+  </div>
+
+  <div class="settings_menu">
+    <%= button_to "Account Settings", edit_guardian_path(@family, @current_user), method: "get" %>
+    <%= button_to "Add Another Guardian", add_guardian_path, method: "get"%>
+    <%= button_to "Add A Child", new_child_path, method: "get"%>
+  </div>
+</div>

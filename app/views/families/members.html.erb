@@ -1,0 +1,38 @@
+<div id="members_container">
+  <div class="page_title">
+    <h2> Our Family </h2>
+  </div>
+  <div class="guardian_title">
+    <h3> Guardians: </h3>
+  </div>
+  
+  <div class = "guardian_list">
+    <% @family.guardians.each do |guardian|%>
+      <div class="guardian">
+        <div class= "image_container">
+          <%= guardian.profile_pic.present? ? image_tag(url_for(guardian.profile_pic), class: "image_resize") : image_tag('/images/Missing_profile.png', class:"image_resize")  %> 
+        </div>
+        <p class="name"><strong><%= guardian.full_name %></strong></p>
+        <p class="role"><%= guardian.role %></p>
+        <%= button_to "Remove Guardian", delete_guardian_path(@family, guardian), {method: 'delete', class: "delete_button", params: {:delete_id => guardian.id}, data: { confirm: "Are you sure you would like to delete this Guardian?" } } unless guardian == @current_user%>
+      </div>
+    <% end %> 
+  </div>
+
+    <div class="section_head">
+      <h3> Children: </h3>
+    </div>
+  <div class = "children_list">
+    <% @family.children.each do |child|%>
+      <div class="child">
+        <div class= "image_container">
+          <%= child.profile_pic.present? ? image_tag(url_for(child.profile_pic), class: "image_resize") : image_tag('/images/Missing_profile.png', class: "image_resize")  %>
+        </div>
+        <p class="name"><strong><%= child.full_name %></strong></p>
+        <%= button_to "Edit", edit_child_path(@current_user.family, child.id), method: "get"%>
+        <%= button_to "Remove Child", delete_child_path(@family, child), {method: 'delete', class: "delete_button", data: { confirm: "Are you sure you would like to delete this Guardian?" } } %>
+      </div>
+    <% end %> 
+  </div>
+
+</div>

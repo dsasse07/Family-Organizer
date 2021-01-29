@@ -1,0 +1,47 @@
+<div class="create_form">
+  <%= form_for @new_guardian, options = {url: logged_in? ? add_guardian_path(@current_user.family) : '/signup'} do |f| %>
+    <% if @new_guardian.profile_pic.present? %>
+      <div class="image_container">
+        <%= image_tag(url_for(@new_guardian.profile_pic), class: "image_resize")%>
+      </div>
+    <% end %>
+    <%= f.label :profile_pic, @new_guardian.profile_pic.present? ? "Update Profile Picture" : "Upload a Profile Picture"%>
+    <%= f.file_field :profile_pic %>
+    
+    <%= content_tag(:p, "First Name #{flash[:messages]["first_name"].first}") if errors? && flash[:messages]["first_name"].present? %>
+    <%= f.text_field :first_name, placeholder: "First name" %>
+
+    <%= content_tag(:p, "Last Name #{flash[:messages]["last_name"].first}") if errors? && flash[:messages]["last_name"].present? %>
+    <%= f.text_field :last_name, placeholder: "Last name" %>
+
+    <%= content_tag(:p, "Username #{flash[:messages]["username"].first}") if errors? && flash[:messages]["username"].present? %>
+    <%= f.text_field :username, placeholder: "Username" %>
+
+    <%= content_tag(:p, "Password #{flash[:messages]["password"].first}") if errors? && flash[:messages]["password"].present?%>
+    <%= f.password_field :password, placeholder: "Password" %>
+    
+    <%= content_tag(:p, "Password #{flash[:messages]["password_confirmation"].first}") if errors? && flash[:messages]["password_confirmation"].present?%>
+    <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+    
+    <%= content_tag(:p, "Email #{flash[:messages]["email"].first}") if errors? && flash[:messages]["email"].present?%>
+    <%= f.text_field :email, placeholder: "Email Address"%>
+
+    <%= content_tag(:p, "Role #{flash[:messages]["role"].first}") if errors? && flash[:messages]["role"].present?%>
+    <%= f.text_field :role, placeholder: "Family Role (Mother/Father/etc.)" %>
+    
+    <%# <%= @current_user ? image_tag(url_for(@family.image), size: '250x125') : image_tag('/images/Missing_profile.png', size: '250x125')  %>
+     <% if @new_guardian.family && @new_guardian.family.image %>
+      <div class="image_container">
+        <%= image_tag(url_for(@family.image), class: "image_resize")%>
+      </div>
+    <% end %>
+    <%= f.label :image, "Upload a family photo" %>
+    <%= f.file_field :image %>
+    
+    <!--<%= f.fields_for :family, Family.new do |family_field| %> 
+        <%= family_field.label :image, "Upload family photo" %> 
+        <%= family_field.file_field :image  %> 
+        <% end %> -->
+    <%= f.submit logged_in? ? "Update Account" : "Create an Account" %>
+  <% end %>
+</div>

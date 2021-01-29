@@ -1,0 +1,36 @@
+<div class="photo_album">
+    <div class="page_title">
+            <h2> Family Album </h2>
+    </div>
+
+    <div class="new_photo">
+        <div class="new_photo_title">
+            <strong><p>Upload a new photo</p></strong>
+        </div>
+        <div class="error">
+            <% if flash[:messages] %>
+                <%= flash[:messages][0]%>
+            <%end%>
+        </div>
+        <div class="new_photo_form">
+            <%= form_for @photo do |f| %>     
+              <%= f.text_field :title, placeholder: "Title" %>  
+              <%= f.text_field :description, placeholder: "Description" %>          
+              <%= f.file_field :attachment %>      
+              <%= f.submit "Upload Photo" %>      
+            <% end %>
+              
+        </div>
+    </div>
+
+    <div class="album">
+        <% @photos.each do |photo| %>
+            <div class="image_container">
+                <%= link_to(image_tag(url_for(photo.attachment), class: "image_resize"), photo_path(@family, photo.id)) %>
+               
+                
+            </div>
+        <%end%>
+    </div>
+</div>
+

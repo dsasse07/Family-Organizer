@@ -1,0 +1,21 @@
+<div class="list_show">
+  <div class="page_title">
+    <h2> Create a New List </h2>
+  </div>
+
+<% if flash[:notice] %>
+    <p class="error"><%= flash[:notice].first %></p>
+<%end%>
+
+  
+    <div class="container" id="list">
+    
+    <%= form_for @list do |f| %>
+        <%= f.text_field :title, placeholder: "List Title" %>
+        <%= f.hidden_field :family_id, value: @current_user.family.id %>
+        <%= f.submit  %>
+
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,24 @@
+<div class="create_form">
+  <%= form_for @child, options = {url: @child.id ? edit_child_path(@child.family, @child) : new_child_path()} do |f| %>
+    <% if @child.profile_pic.present? %>
+      <div class="image_container">
+        <%= image_tag(url_for(@child.profile_pic), class: "image_resize") %>
+      </div>
+    <% end %>
+    <%= f.label :profile_pic, @child.profile_pic.present? ? "Update Profile Picture" : "Upload a Profile Picture"%>
+    <%= f.file_field :profile_pic %>  
+    
+    <%= content_tag(:p, "First Name #{flash[:messages]["first_name"].first}") if errors? && flash[:messages]["first_name"].present? %>
+    <%= f.text_field :first_name, placeholder: "First Name"  %>     
+    
+    <%= content_tag(:p, "Last Name #{flash[:messages]["last_name"].first}") if errors? && flash[:messages]["last_name"].present? %>
+    <%= f.text_field :last_name, placeholder: "Last Name"  %>         
+    
+    <%= content_tag(:p, "Birth Date #{flash[:messages]["birth_date"].first}") if errors? && flash[:messages]["birth_date"].present? %>
+    <%= f.date_field :birth_date%>     
+    
+
+    <%= f.hidden_field :family_id, value: @current_user.family.id %>     
+    <%= f.submit @child.id ? "Update info" : "Add a Child to your Family" %>     
+  <% end %>
+</div>

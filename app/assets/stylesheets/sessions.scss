@@ -1,0 +1,170 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+  
+.login {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr 1fr;
+height: 80vh; 
+// height: 100vh;
+
+
+}
+
+.welcome_banner {
+grid-column: 1/-1;
+width: 100vw;
+text-align: center;
+background: rgb(22, 22, 22);
+color: rgb(194, 194, 194);
+border: 3px solid rgb(2, 2, 2);
+font-size: 1.2rem;
+align-self: start;
+}
+.login_form {
+  display: grid;
+  grid-column: 2;
+  grid-row: 1;
+  justify-content: center;
+  align-content: center;
+  // background: url("https://www.pngkey.com/png/full/125-1253175_free-celtic-vine-border-accent-clipart-illustration-simple.png");
+  // background-size:contain;
+  // background-repeat: no-repeat;
+  // background-position: center;
+}
+.login_form form {
+  display: grid;
+  // height: 400px;
+  justify-content: center;
+  align-items: center;
+  // background: radial-gradient(transparent, rgba(19, 19, 19, 0.774));
+  // border-radius: 10px;
+  // border: 1px solid rgb(194, 194, 194);
+  // box-shadow: var(--shadow);
+
+}
+
+p.error {
+  text-align: center;
+}
+
+.ad {
+display: grid;
+grid-column: 1;
+grid-row: 1 / 4;
+// background: linear-gradient(to top, var(--pink), var(--cream));
+justify-content: center;
+align-content: center;
+// background: url("https://www.seekpng.com/png/full/49-490157_pine-tree-branch-png-snow-tree-png.png");
+// background: url("https://freepngimg.com/thumb/tree/75818-oak-silhouette-tree-drawing-trees-png-download-free.png");
+// background-repeat: no-repeat;
+// background-position: top; 
+// background-size: cover;
+
+
+}
+
+
+
+#ad_messages {
+  // background: radial-gradient(rgb(19, 19, 19), rgb(102, 102, 102));
+  // background: radial-gradient(rgba(5, 89, 145, 0.75), rgba(102, 102, 102, 0.75));
+  width: 500px;
+  height: minmax(125px, auto);
+  background: rgba(5, 89, 145, 0.75);
+  // background: rgba(24, 36, 44, 0.75);
+  border-radius: 10px; 
+  border: 2px solid rgba(255, 255, 255, 0.445);
+  text-align: center;
+
+}
+  
+
+
+#login_button {
+padding: 0;
+}
+#username {
+display: block;
+margin-bottom: -2rem;
+}
+#password {
+display: block;
+}
+.signup {
+display: grid;
+// grid-template-rows: repeat(2, 1fr);
+grid-column: 2;
+grid-row: 2/3;
+justify-content: center;
+justify-items: center;
+background: url("https://www.pngkey.com/png/full/125-1253175_free-celtic-vine-border-accent-clipart-illustration-simple.png");
+background-size:contain;
+background-repeat: no-repeat;
+background-position: center;
+align-items: center;
+// background: linear-gradient(to right, var(--pink), var(--cream));
+}
+
+.signup h2 {
+  align-self: end;
+  color: var(--blue);
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-shadow: 1px 1px 1px #000;
+  padding: 10px;
+  background: rgba(5, 89, 145, 0.75);
+  border-radius: 10px; 
+  border: 2px solid rgba(255, 255, 255, 0.445);
+}
+.signup form.button_to input {
+  width: 19rem;
+  height: 4rem;
+  font-size: 2rem;
+  margin: 30px;
+  background: rgba(5, 89, 145, 0.75);
+
+}
+.login_form input {
+  width: 18rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  margin: 30px;
+  
+  
+}
+
+
+
+input {
+text-align: center;
+background: rgb(219, 219, 219);
+// border: 0;
+border: 1px solid  rgb(209, 209, 209);
+border-radius: 10px;
+box-shadow: var(--shadow);
+margin: 5px;
+color: rgb(22, 22, 22);
+font-size: 15px;
+}
+
+input[type="submit"] {
+  // background: rgb(5, 89, 145);
+  background: rgba(5, 89, 145, 0.75);
+
+  color: rgb(221, 221, 221);
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 0.75rem;
+   
+}
+input[type="file"]::file-selector-button {
+  // background: rgb(136, 185, 124);
+  background: rgb(5, 89, 145);
+  color: rgb(221, 221, 221);
+
+  border-radius: 10px;
+  height: 1.2rem;
+  font-size: 0.9rem;
+}

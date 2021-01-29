@@ -1,0 +1,266 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ :root {
+    --dark_green: #797d62;
+    --light_green: #9b9b7a;
+    --pink: #d9ae94;
+    --cream: #f1dca7;
+    --yellow: #ffcb69;
+    --auburn: #d08c60;
+    --brown: #997b66;
+    --shadow: 2px 2px 2px 1px rgba(0, 0, 3, 0.404);
+ }
+
+ .page_title {
+  grid-row: 1;
+  grid-column: 1 / -1;
+
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+ 
+html {
+  /* background: linear-gradient(to right, var(--cream), var(--pink), var(--cream)); */
+  /* background: linear-gradient(to right, rgb(31, 31, 31), #cecece, rgb(31, 31, 31) ); */
+  /* background: radial-gradient(#cecece, rgb(15, 15, 15) ); */
+  color: white;
+  // text-shadow: 2px 2px black;
+  font-family: 'Cinzel Decorative', cursive;
+
+  height: 100vh;
+  background: radial-gradient( #1b2735 0%, #090a0f 100%);
+  // overflow: scroll;
+  // overflow-x: hidden;
+  filter: drop-shadow(0 0 10px white);
+
+}
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+.snow {
+  $total: 200;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+
+  z-index: -1;
+
+  @for $i from 1 through $total {
+    $random-x: random(1000000) * 0.0001vw;
+    $random-offset: random_range(-100000, 100000) * 0.0001vw;
+    $random-x-end: $random-x + $random-offset;
+    $random-x-end-yoyo: $random-x + ($random-offset / 2);
+    $random-yoyo-time: random_range(30000, 80000) / 100000;
+    $random-yoyo-y: $random-yoyo-time * 100vh;
+    $random-scale: random(10000) * 0.0001;
+    $fall-duration: random_range(10, 30) * 1s;
+    $fall-delay: random(30) * -1s;
+
+    &:nth-child(#{$i}) {
+      opacity: random(10000) * 0.0001;
+      transform: translate($random-x, -10px) scale($random-scale);
+      animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+    }
+
+    @keyframes fall-#{$i} {
+      #{percentage($random-yoyo-time)} {
+        transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+      }
+
+      to {
+        transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+      }
+    }
+  }
+}
+/* 
+div {
+  align-content: center;
+}
+*/
+
+div#main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px minmax(400px,1fr);
+
+  // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  // background-repeat: no-repeat;
+   
+}
+
+#content {
+  grid-row: 2;
+  height: 80vh;
+
+}
+
+/* #footer {
+  background: linear-gradient(to right, var(--cream), var(--pink), var(--cream));
+} */
+
+header#main {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  width: auto;
+  align-items: center;
+  /* justify-items: center; */
+  /* justify-items: center; */
+  /* background:rgb(226, 30, 30); */
+  /* background:rgb(19, 19, 19); */
+  background:rgba(0, 0, 0, 0.808);
+  // border: 2px solid black;
+}
+
+/* header h1 {
+  font-size: 3rem;
+
+} */
+
+.home_button input {
+  background:transparent;
+  border: 0;
+  font-size: 3rem;
+  box-shadow: none;
+  font-weight: bolder;
+  color: rgb(221, 221, 221);
+  font-family: 'Cinzel Decorative', cursive;
+  width: auto;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+}
+.home_button {
+  width: auto;
+  /* margin: 0; */
+  padding: 0;
+  justify-self: start;
+  /* background:rgb(189, 68, 68);
+  width: 100rem; */
+}
+
+#navbar {
+  /* grid-column: 3; */
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  background: var(--blue);
+  margin-right: 10px;
+}
+
+#navbar input {
+  margin-right: 5px;
+  // width: 5rem;
+  height: 2rem;
+}
+
+#user{
+  /* padding-left: 200px; */
+  justify-self: end;
+  text-align: end;
+}
+
+.error {
+  color: rgb(252, 52, 17);
+  text-shadow: 1px 1px #000000;
+  font-size: 1.2rem;
+}
+/*
+input {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #0ECDC2;
+  -webkit-text-stroke: 2px #0B7D24;
+}
+
+input.button_to {
+  background-color: #66FBFB;
+  border: 1px #0B7D24;
+  border-radius: 15px;
+  min-width: 75px;
+  padding: 3px;
+}
+
+button {
+  background-color: #66FBFB;
+  border: 1px #0B7D24;
+  opacity: 0.8;
+  border-radius: 15px;
+  min-width: 75px;
+  padding: 3px;
+}
+
+input[type="submit"] {
+  background-color: #66FBFB;
+  border: 2px solid #0B7D24;
+  opacity: 0.8;
+  border-radius: 15px;
+  min-width: 75px;
+  padding: 3px;
+}
+
+input[type="text"] {
+  background-color: #66FBFB;
+  border: 2px solid #0B7D24;
+  opacity: 0.8;
+  border-radius: 15px;
+  min-width: 75px;
+  padding: 3px;
+  text-align: center;
+}
+
+input[type="password"] {
+  background-color: #66FBFB;
+  border: 2px solid #0B7D24;
+  opacity: 0.8;
+  border-radius: 15px;
+  min-width: 75px;
+  padding: 3px;
+  text-align: center;
+}  */
+
+
+
+
+
+
+
+
+
+
+

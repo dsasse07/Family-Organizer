@@ -1,0 +1,37 @@
+<div class="login">
+
+
+  <%# <div class= "welcome_banner">
+    <h1 class="welcome"> Welcome to Family Manager </h1>
+  </div> %>
+
+  <div class="ad">
+    
+    <div id="ad_messages">
+      <p> Organize your Family </p>
+      <p> Share your Lists! </p>
+      <p> Build your Family Album! </p>
+      <p> Winter is coming... </p>
+      <p> Sign up Today!!</p>
+    </div>
+  </div>
+
+  <div class="login_form">
+    <% if flash[:message] %>
+      <p class="error"><%= flash[:message] %></p>
+    <%end%>
+    <%= form_tag login_path do %>
+      <p><%= text_field_tag :username, value= nil, {placeholder: "Username"} %></p>
+      <p><%= password_field_tag :password, value= nil, {placeholder: "Password"} %></p>
+      <%= submit_tag "Login", id:"login_button"%>
+    <% end %>
+  </div>
+
+  <div class= "signup">
+    <%# <h2> Signup Today </h2> %>
+    <%= button_to "Signup!", signup_path, method: 'get'%>
+  </div>
+
+  
+
+</div>

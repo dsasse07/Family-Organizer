@@ -1,0 +1,184 @@
+// Place all the styles related to the Photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.photo_album {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 8rem minmax(10px, 1fr);
+
+}
+
+.photo_album .page_title{
+    grid-row: 1;
+}
+
+.photo_album .new_photo {
+    grid-row: 2;
+}
+
+.new_photo .new_photo_form #photo_attachment #file-upload-button {
+    // background: rgb(136, 185, 124);
+    background: rgb(5, 89, 145);
+    color: rgb(221, 221, 221);
+  
+    border-radius: 10px;
+    height: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+
+
+.photo_album .album {
+    grid-row: 3;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-auto-rows: 1fr;
+    grid-auto-flow: dense;
+    margin: 20px;
+}
+
+.photo_album .album .image_container{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.photo_album .album .image_resize{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+
+
+
+
+
+.photo_show {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 300px 1fr;
+}
+
+
+.edit_photo {
+    // display: block;
+    // margin: 0 auto;
+    text-align: center;
+}
+#edit_photo {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 100px 100px 1fr 200px;
+    height: 80vh;
+    justify-items: center;
+}
+#edit_photo #title {
+    grid-row: 1 span 2;
+}
+
+#edit_photo .edit_photo #description {
+    grid-row: 4;
+    grid-column: 1/3;
+    justify-items: center;
+    
+}
+#edit_photo .edit_photo input#photo_title.photo_title{
+    // grid-column: 1;
+    // grid-row: 3 span 2;
+    width: auto;
+    height: auto;
+    justify-self: center;
+    background: rgba(0, 0, 0, 0.479);
+    border: 1px solid rgba(219, 219, 219, 0.712);
+    color: rgb(231, 231, 231);
+}
+
+
+#edit_photo #delete_photo {
+    grid-row: 1;
+    grid-column: 2;
+    height: 40px;
+    width: 150px;
+    justify-self: center;
+}
+
+#title {
+    justify-content: center;
+}
+#edit_photo form input {
+    grid-row: 1;
+    grid-column: 1;
+    height: 40px;
+    width: 150px
+}
+
+#edit_photo #photo_container {
+    grid-row: 3;
+    grid-column: 1/3;
+}
+
+#edit_photo #photo_description {
+    // grid-row: 4;
+    // grid-column: 1/3;
+    font-size: 1.1rem;
+    font-family: 'Cinzel Decorative', cursive;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.479);
+    color: rgb(226, 225, 225);
+    text-align: center;
+    width: 1000px;
+    justify-self: center;
+
+}
+
+.edit_photo input#photo_title.photo_title {
+    font-family: 'Cinzel Decorative', cursive;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+#edit_photo #photo_container {
+    max-height: 800px;
+    width: auto;
+    overflow: hidden;
+    display: grid;
+    // grid-template-columns: 1fr;
+    // place-content: center center;
+    // place-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#edit_photo #photo_container .image_resize_large {
+    width: 90%;
+    height: 90%;
+    object-fit: scale-down;
+
+}
+
+// .item {
+//     overflow: hidden;
+//     display: grid;
+//     grid-template-columns: 1;
+//     grid-template-rows: 1;
+//   }
+
+//   .item img {
+//     grid-column: 1 / -1;
+//     grid-row: 1/-1;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }

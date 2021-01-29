@@ -1,0 +1,12 @@
+<div id="navbar">
+  <div id="user">
+    <strong><%= "Hi, #{current_user.first_name.downcase.capitalize}!" %></strong>
+  </div>
+
+  <%= button_to "Home", family_path(@current_user.family), method:"get"%>
+  <%= button_to "Family Members", family_members_path, method: "get"%>
+  <%= button_to "Lists", lists_path(@current_user.family), method:"get"%>
+  <%= button_to "Photo Album", photos_path, method: 'get' %>
+  <%= button_to "Settings", family_settings_path(@current_user.family), method:"get"%>
+  <%= button_to "Logout", logout_path, method: 'delete' %>
+</div>

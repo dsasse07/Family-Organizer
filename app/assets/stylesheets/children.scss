@@ -1,0 +1,27 @@
+// Place all the styles related to the Children controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.add_child {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.create_form{
+  // background: radial-gradient(white, transparent);
+  background: radial-gradient(transparent, rgb(19, 19, 19));
+  height: auto;
+  width: 20rem;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid black;
+}
+
+.create_form img {
+  display: block;
+  justify-self: center
+}

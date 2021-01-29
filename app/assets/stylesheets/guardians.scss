@@ -1,0 +1,91 @@
+// Place all the styles related to the Guardians controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.register {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    // justify-content: center;
+    // justify-items: center;
+    // align-items: center;
+    // align-content: center;
+    // text-align: center;
+}
+
+#register_header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / -1;
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+    border: 5px solid black;
+    text-align: center;
+    background: rgb(22, 22, 22);
+    color: rgb(172, 172, 172);
+    border: 3px solid rgb(2, 2, 2);
+}
+#register_header h1 {
+    grid-column: 1;
+    margin-left: 150px;
+}
+#register_header input {
+    grid-column: -1;
+    margin: 20px;
+}
+
+.create_form {
+    border: 1px solid rgb(209, 209, 209);
+
+}
+
+.create_form form{
+    display: grid;
+    grid-column: 2;
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    // padding-right: 60px;
+    text-align: center;
+
+}
+
+.create_form form p {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: rgb(218, 0, 0);
+}
+.create_form label {
+    padding: 0;
+    margin: 0;
+    // font-size: 14px;
+}
+.create_form input {
+    padding: 0;
+    margin: 0;
+}
+
+#add_guard_container {
+    display: grid;
+    justify-items: center;
+
+}
+
+#add_guard_container img {
+    display: block;
+    justify-self: center
+}
+
+#edit_guard_container {
+    display: grid;
+    justify-items: center;
+
+}
+
+
+#edit_guard_container img {
+    display: block;
+    justify-self: center
+}

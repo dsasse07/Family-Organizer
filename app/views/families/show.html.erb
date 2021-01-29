@@ -1,0 +1,42 @@
+
+<div  class="container" id="family">
+  <div id="recentlist"> 
+    <h3 id="most_recent"> Most Recent List </h3>
+    
+    <div class="notepad">
+      <% if @family.lists.present? %>
+        <h3 class="list_title"><%= link_to @family.most_recent_list.title, list_path(@family,@family.most_recent_list) %></h3>
+        <div id="edit_button">
+          <%= button_to "Edit", list_path(@family,@family.most_recent_list), method: "get" %>
+        </div>
+            <ul class="list_items">
+              <% @family.most_recent_list_items.each do |list_item|%>
+                <% if list_item.complete %>
+                  <li class="complete_list_item"><%= list_item.content %></li>
+                <% else %>
+                  <li class="incomplete_list_item"><%= list_item.content %></li>
+                <%end%>
+              <% end %>
+            </ul>
+      <% else %>
+        <ul class="list_items">
+          <li><%= link_to "No lists yet. Click here to make one now!", new_list_path(@family) %></li>
+          </ul>
+      <% end %>
+    </div>
+
+
+  </div> 
+
+
+  <div id="familyphoto"> 
+    <h3>Family Photo</h3>
+    <% if @family.image.present? %>
+      <%= image_tag url_for @family.image %>   
+    <% else %>
+      <p> Add a Photo Under Account Settings to Display!</p>
+    <% end %>
+  </div>
+  
+
+</div>
