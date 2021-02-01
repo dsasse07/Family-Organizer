@@ -1,46 +1,23 @@
 
 <div class="photo_show">
-<!--
-  <% if @photo.title %>
-      <div class="page_title">
-        <h2> <%= @photo.title %> </h2>
-      </div>
-  <% else %>
-    <div class="page_title">
-      <h2> Oh, the memories... </h2>
-    </div>
-  <% end %>
---> 
-
-  <%# <div id="photo_descrition">
-    <% if @photo.description %>
-      <%# <div class="page_description"> %>
-        <%# <> <%= @photo.description %> 
-      <%# </div> %>
-    <%# <% else %>
-      <%# <div class="page_description"> %>
-        <%# <h2> What's Happening Here? </h2> %>
-      <%# </div> %>
-    <%# <% end %> 
-  <%# </div> %> 
 
   <div id="edit_photo">
     <%= form_for @photo do |f| %>
-    <div id="title">
-      <%= f.text_field :title, placeholder: "Add Title", class:"photo_title"%>
-    </div>
-    
-    <div id="photo_container">
-      <%= image_tag(url_for(@photo.attachment), class: "image_resize_large") %>
-    </div>
-
-    <div id="description">
-      <%= f.text_area :description, placeholder: "What's happening here? Tell us about it!" %>
-    </div>
-
     <div id="update_photo_button">
       <%= f.submit %>
     </div>
+    <div id="title">
+      <%= f.text_field :title, placeholder: "Add Title", class:"photo_title"%>
+    </div>
+    <div id="description">
+      <%= f.text_area :description, placeholder: "What's happening here? Tell us about it!" %>
+    </div>
+    
+    <div id="photo_container" class="glow">
+      <%= image_tag(url_for(@photo.attachment), class: "image_resize_large") %>
+    </div>
+
+
     <% end %>
 
     <div id="delete_photo">

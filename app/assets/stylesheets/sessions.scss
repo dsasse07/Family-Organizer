@@ -138,33 +138,3 @@ align-items: center;
 
 
 
-input {
-text-align: center;
-background: rgb(219, 219, 219);
-// border: 0;
-border: 1px solid  rgb(209, 209, 209);
-border-radius: 10px;
-box-shadow: var(--shadow);
-margin: 5px;
-color: rgb(22, 22, 22);
-font-size: 15px;
-}
-
-input[type="submit"] {
-  // background: rgb(5, 89, 145);
-  background: rgba(5, 89, 145, 0.75);
-
-  color: rgb(221, 221, 221);
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 0.75rem;
-   
-}
-input[type="file"]::file-selector-button {
-  // background: rgb(136, 185, 124);
-  background: rgb(5, 89, 145);
-  color: rgb(221, 221, 221);
-
-  border-radius: 10px;
-  height: 1.2rem;
-  font-size: 0.9rem;
-}

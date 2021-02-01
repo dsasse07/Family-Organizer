@@ -1,9 +1,9 @@
 
-<div  class="container" id="family">
-  <div id="recentlist"> 
-    <h3 id="most_recent"> Most Recent List </h3>
+<div id="family__container">
+  <div id="list__recent"> 
+    <h3 class="page__title"> Most Recent List </h3>
     
-    <div class="notepad">
+    <div id="notepad" class="paper glow"> 
       <% if @family.lists.present? %>
         <h3 class="list_title"><%= link_to @family.most_recent_list.title, list_path(@family,@family.most_recent_list) %></h3>
         <div id="edit_button">
@@ -21,7 +21,7 @@
       <% else %>
         <ul class="list_items">
           <li><%= link_to "No lists yet. Click here to make one now!", new_list_path(@family) %></li>
-          </ul>
+        </ul>
       <% end %>
     </div>
 
@@ -30,11 +30,11 @@
 
 
   <div id="familyphoto"> 
-    <h3>Family Photo</h3>
+    <h3 class="page__title">Family Photo</h3>
     <% if @family.image.present? %>
-      <%= image_tag url_for @family.image %>   
+      <%= image_tag(url_for(@family.image), class:"glow") %>   
     <% else %>
-      <p> Add a Photo Under Account Settings to Display!</p>
+      <p class="page__title"> Add a Photo Under Account Settings to Display!</p>
     <% end %>
   </div>
   

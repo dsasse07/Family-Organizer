@@ -1,14 +1,14 @@
 <div id="members_container">
-  <div class="page_title">
+  <div class="page__title">
     <h2> Our Family </h2>
   </div>
   <div class="guardian_title">
-    <h3> Guardians: </h3>
+    <h2> Guardians: </h2>
   </div>
   
   <div class = "guardian_list">
     <% @family.guardians.each do |guardian|%>
-      <div class="guardian">
+      <div class="guardian glow">
         <div class= "image_container">
           <%= guardian.profile_pic.present? ? image_tag(url_for(guardian.profile_pic), class: "image_resize") : image_tag('/images/Missing_profile.png', class:"image_resize")  %> 
         </div>
@@ -20,11 +20,11 @@
   </div>
 
     <div class="section_head">
-      <h3> Children: </h3>
+      <h2> Children: </h2>
     </div>
   <div class = "children_list">
     <% @family.children.each do |child|%>
-      <div class="child">
+      <div class="child glow">
         <div class= "image_container">
           <%= child.profile_pic.present? ? image_tag(url_for(child.profile_pic), class: "image_resize") : image_tag('/images/Missing_profile.png', class: "image_resize")  %>
         </div>

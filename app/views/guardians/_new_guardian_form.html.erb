@@ -1,4 +1,4 @@
-<div class="create_form">
+<div class="create_form glow">
   <%= form_for @new_guardian, options = {url: logged_in? ? add_guardian_path(@current_user.family) : '/signup'} do |f| %>
     <% if @new_guardian.profile_pic.present? %>
       <div class="image_container">

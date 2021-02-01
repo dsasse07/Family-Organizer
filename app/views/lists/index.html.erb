@@ -1,15 +1,18 @@
-<div class="lists_index">
+<div id="lists_index">
     
-    <div class="page_title">
+    <div class="page__title">
         <h2> Family Lists </h2>
     </div>
 
     <div id= "list_container">
-        <div class="new_list">
+        <div class="new_list paper glow">
             <%= button_to "+ New List", new_list_path, method: "get" %>
         </div>
         <% @family.sorted_lists.each do |list| %>
-            <div class="list_preview"> 
+            <div class="list_preview paper glow"> 
+                <div class="list_title">
+                    <h3><%= link_to list.title, list_path(@family, list) %></h3>
+                </div>
                 <div class="edit_delete_button">
                     <div class="leftside">
                         <%= button_to "Edit", list_path(@family, list), method: "get", id: "edit_button"%>
@@ -18,9 +21,6 @@
                         <%= button_to "Delete List", delete_list_path, method: "delete", params: {list_id: list.id}, class: "delete_button"%>
                     </div>
                 </div>
-            <div class="list_title">
-                <h3><%= link_to list.title, list_path(@family, list) %></h3>
-            </div>
                 <div class="list_items">
                     <ul>
                         <% list.six_most_recent_list_items.each do |list_item|%>

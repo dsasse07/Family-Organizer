@@ -1,22 +1,24 @@
 <div class="list_show">
-  <div class="page_title">
+  <div class="page__title">
     <h2> Your List </h2>
   </div>
 
 
-  <div class="container" id="list">
+  <div class="container paper glow" id="list">
     
+    <div class="list_title">
+      <h3><%= @list.title %></h3>
+    </div>
     <div class="delete_list"><%= button_to "Delete List", delete_list_path, method: "delete", class: "delete_button", params: {list_id: @list.id}%></div>
-      <div id="new_list_item_form">
-        <%= form_for @list_item, options = {url: '/listItems', method: 'post'} do |f|%>
-          <%= f.text_field :content %>
-          <%= f.hidden_field :list_id, value: params[:list_id] %>
-          <%= f.submit "Add" %>
-        <% end %>
-      </div>
-      <div class="list_title">
-        <h3><%= @list.title %></h3>
-      </div>
+    
+    <div id="new_list_item_form">
+      <%= form_for @list_item, options = {url: '/listItems', method: 'post'} do |f|%>
+        <%= f.text_field :content %>
+        <%= f.hidden_field :list_id, value: params[:list_id] %>
+        <%= f.submit "Add" %>
+      <% end %>
+    </div>
+
         <div class= "items">
           <% if @list.list_items.present? %>
             <% @list.sorted_items.each do |list_item|%>
@@ -48,7 +50,9 @@
             <% end %>
           <% else %>
             <div></div>
-            <div id="no_list_items"> No Items to Display</div>
+            <div id="no_list_items"> 
+              <li>No Items to Display Yet</li>
+            </div>
             <div></div>
           <% end %>
     </div>

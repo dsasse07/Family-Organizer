@@ -1,4 +1,4 @@
-<div class="create_form">
+<div class="create_form glow">
   <%= form_for @child, options = {url: @child.id ? edit_child_path(@child.family, @child) : new_child_path()} do |f| %>
     <% if @child.profile_pic.present? %>
       <div class="image_container">
