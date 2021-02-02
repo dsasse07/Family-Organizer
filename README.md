@@ -26,7 +26,7 @@ This application was completed as an end-of-module project for phase 2 of Flatir
 Pull requests are welcome. Please make sure that your PR is <a href="https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/">well-scoped</a>. For major changes, please open an issue first to discuss what you would like to change.
 
 ### Known issues
-* <a href="https://github.com/dsasse07/Family-Manager/issues">Visit Issues Section</a>
+* <a href="https://github.com/dsasse07/Family-Manager/issues">Visit Issues Section</a> 
 
 ### Contributors
 <table>
