@@ -18,14 +18,17 @@ This application was completed as an end-of-module project for phase 2 of Flatir
 - If testing data is desired, run `rails db:seed`
 - run `rails s` to launch your local server and open a browser to `localhost:3000`
 
+## ERD Model
 
-## 3. Contributing
+<img src="./Domain ERD.png" alt="Family Organizer ERD Model">
+
+## Contributing
 Pull requests are welcome. Please make sure that your PR is <a href="https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/">well-scoped</a>. For major changes, please open an issue first to discuss what you would like to change.
 
-### 3.1 Known issues
+### Known issues
 * <a href="https://github.com/dsasse07/Family-Manager/issues">Visit Issues Section</a>
 
-### 3.2 Contributors
+### Contributors
 <table>
   <tr>
     <td align="center"><a href="https://github.com/dsasse07"><img src="https://avatars1.githubusercontent.com/u/72173601?s=400&u=57e4654c70d63d16bc5b84e2878d97f770672715&v=4" width="200px;" alt=""/><br /><sub><b>Daniel Sasse</b></sub></a><br />
