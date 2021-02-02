@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Family Manager</title>
+    <title>Family Organizerr</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -214,13 +214,13 @@
 
     <% if logged_in? %>
       <header id="main" class="glow">
-        <%= button_to "Family Manager", root_path, method: "get", id: "home" %>
+        <%= button_to "Family Organizer", root_path, method: "get", id: "home" %>
         <p id="user"><%= "Hi, #{current_user.first_name.downcase.capitalize}!" %></p>
         <%= render "layouts/navbar" %>
       </header>
       <% else %>
           <div class= "welcome_banner glow">
-            <h1 class="welcome"> Welcome to Family Manager </h1>
+            <h1 class="welcome"> Welcome to Family Organizer </h1>
           </div>
     <%end%>
     <div id="content">
