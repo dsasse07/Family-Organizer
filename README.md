@@ -1,4 +1,11 @@
-<h1 style="text-align: center">Family Organizer</h1>
+# Family Organizer
+![Family Organizer Logo](https://i.imgur.com/PmCMSXC.png)
+
+[Demo Video](https://youtu.be/7hwDpslkDH8)
+
+---  
+
+## Welcome to Family Organizer
 
 ## About
 
@@ -20,13 +27,13 @@ This application was completed as an end-of-module project for phase 2 of Flatir
 
 ## ERD Model
 
-<img src="./Domain ERD.png" alt="Family Organizer ERD Model">
+![Family Organizer ERD Model](https://github.com/dsasse07/Family-Organizer/raw/main/Domain%20ERD.png)
 
 ## Contributing
 Pull requests are welcome. Please make sure that your PR is <a href="https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/">well-scoped</a>. For major changes, please open an issue first to discuss what you would like to change.
 
 ### Known issues
-* <a href="https://github.com/dsasse07/Family-Manager/issues">Visit Issues Section</a>
+[Visit Issues Section](https://github.com/dsasse07/Family-Manager/issues)
 
 ### Contributors
 <table>
