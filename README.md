@@ -37,7 +37,8 @@ Pull requests are welcome. Please make sure that your PR is [well-scoped](https:
 
 #### Contributors
 <img src="https://avatars1.githubusercontent.com/u/72173601?s=400&u=57e4654c70d63d16bc5b84e2878d97f770672715&v=4" alt="dsasse07" class="contributor" width="200px"/>
-![dsasse07](https://avatars1.githubusercontent.com/u/72173601?s=400&u=57e4654c70d63d16bc5b84e2878d97f770672715&v=4 | width=200) | ![mcardona9015](https://avatars.githubusercontent.com/u/73857382?s=460&v=4 | =200x)
+
+![dsasse07](https://avatars1.githubusercontent.com/u/72173601?s=400&u=57e4654c70d63d16bc5b84e2878d97f770672715&v=4) | ![mcardona9015](https://avatars.githubusercontent.com/u/73857382?s=460&v=4)
 --- | ---
 Daniel Sasse | Michael Cardona
 <table>
