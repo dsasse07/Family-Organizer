@@ -36,5 +36,5 @@ Pull requests are welcome. Please make sure that your PR is [well-scoped](https:
 [Visit Issues Section](https://github.com/dsasse07/Family-Manager/issues)
 
 #### Contributors
-[Daniel Sasse](https://github.com/dsasse07)
-[Michael Cardona](https://github.com/mcardona9015)
+* [Daniel Sasse](https://github.com/dsasse07)
+* [Michael Cardona](https://github.com/mcardona9015)
