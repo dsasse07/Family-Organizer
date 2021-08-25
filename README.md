@@ -7,7 +7,7 @@
 
 ## Welcome to Family Organizer
 
-## About
+### About
 
 Family Organizer is an app for managing the daily life of a family. It supports shared lists - such as shopping, todo, and gift lists - between all guardians registered for a family in the app. In addition, the app supports the upload of images to create a family photo album.
 
@@ -17,7 +17,7 @@ Guardians may also add children to the app to associate with the family. A futur
 
 This application was completed as an end-of-module project for phase 2 of Flatiron School's software engineering program with using Ruby on Rails and PostgreSQL.
 
-## Running the App
+### Running the App
 - Fork and clone the repo
 - `cd` into the parent directory and run `bundle install`
 - run `rails db:create` to create a database for the app data
@@ -25,17 +25,17 @@ This application was completed as an end-of-module project for phase 2 of Flatir
 - If testing data is desired, run `rails db:seed`
 - run `rails s` to launch your local server and open a browser to `localhost:3000`
 
-## ERD Model
+### ERD Model
 
 ![Family Organizer ERD Model](https://github.com/dsasse07/Family-Organizer/raw/main/Domain%20ERD.png)
 
-## Contributing
-Pull requests are welcome. Please make sure that your PR is <a href="https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/">well-scoped</a>. For major changes, please open an issue first to discuss what you would like to change.
+### Contributing
+Pull requests are welcome. Please make sure that your PR is [well-scoped](https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs). For major changes, please open an issue first to discuss what you would like to change.
 
-### Known issues
+#### Known issues
 [Visit Issues Section](https://github.com/dsasse07/Family-Manager/issues)
 
-### Contributors
+#### Contributors
 <table>
   <tr>
     <td align="center"><a href="https://github.com/dsasse07"><img src="https://avatars1.githubusercontent.com/u/72173601?s=400&u=57e4654c70d63d16bc5b84e2878d97f770672715&v=4" width="200px;" alt=""/><br /><sub><b>Daniel Sasse</b></sub></a><br />
